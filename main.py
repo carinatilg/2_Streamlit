@@ -1,5 +1,7 @@
 import streamlit as st
 import read_data 
+import PIL import Image
+
 
 person_dict = read_data.load_person_data()
 person_names = read_data.get_person_list(person_dict)

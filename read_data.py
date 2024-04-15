@@ -12,7 +12,7 @@ def load_person_data():
 def get_person_list(person_data):
     name_list = []
     for person in person_data:
-        name_list.append(person["lastname"] + " " + person["firstname"])
+        name_list.append(person["lastname"] + ", " + person["firstname"])
     return name_list
 
 
