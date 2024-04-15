@@ -1,6 +1,8 @@
 import streamlit as st
-import load_person_data from read_data
+import read_data 
 
+person_dict = read_data.load_person_data()
+person_names = read_data.get_person_list(person_dict)
 # Eine Überschrift der ersten Ebene
 st.write("# EKG APP")
 
@@ -8,10 +10,6 @@ st.write("# EKG APP")
 st.write("## Versuchsperson auswählen")
 
 # Eine Auswahlbox
-current_user = st.selectbox(
+st.session_state.current_user = st.selectbox(
     'Versuchsperson',
-    options = ["Nutzer1", "Nutzer2"], key="sbVersuchsperson")
-
-st.button("hit me")
-
-print(read_data)
+    options = person_names, key="sbVersuchsperson")

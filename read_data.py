@@ -3,7 +3,7 @@ import json
 
 def load_person_data():
     # Opening JSON file
-    file = open('2_Streamlit/person_db.json') # old: 'data/person_db.json"
+    file = open('person_db.json') # old: 'data/person_db.json"
     # Loading the JSON File in a dictionary
     person_data = json.load(file)
     return person_data
